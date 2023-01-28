@@ -1,4 +1,5 @@
 import LayoutAdmin from "layout/LayoutAdmin";
+import ContactPage from "pages/ContactPage";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
@@ -6,7 +7,9 @@ import LoginPage from "./pages/LoginPage";
 function App() {
   return (
     <Routes>
-      <Route path="layout" element={<LayoutAdmin />}></Route>
+      <Route element={<LayoutAdmin />}>
+        <Route path="/contacts" element={<ContactPage />}></Route>
+      </Route>
       <Route path="/login" element={<LoginPage />}></Route>
     </Routes>
   );
